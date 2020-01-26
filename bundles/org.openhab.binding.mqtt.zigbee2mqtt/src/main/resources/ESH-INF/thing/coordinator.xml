@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="zigbee2mqtt"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<thing-type id="coordinator">
+		<supported-bridge-type-refs>
+    		<bridge-type-ref id="broker" />
+			<bridge-type-ref id="systemBroker" />
+		</supported-bridge-type-refs>
+		<label>Zigbee2mqtt Coordinator</label>
+		<description>Zigbee coordinator thing for Zigbee2mqtt Binding</description>
+		
+		<properties>
+			<property name="zigbee2mqttversion" />
+			<property name="type" />
+			<property name="revision" />
+		</properties>
+
+		<config-description>
+			<parameter name="coordinatorId" type="text" required="true">
+				<label>Zigbee2mqtt Coordinator Id</label>
+				<description>Zigbee2mqtt coordinator id</description>
+				<default>bridge</default>
+			</parameter>
+			<parameter name="baseTopic" type="text" required="true">
+				<label>Zigbee2mqtt Base Prefix</label>
+				<description>Zigbee2mqtt base prefix</description>
+				<default>zigbee2mqtt</default>
+			</parameter>
+		</config-description>
+	</thing-type>
+	
+</thing:thing-descriptions>
